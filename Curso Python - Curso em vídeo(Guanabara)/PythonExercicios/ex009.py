@@ -1,0 +1,27 @@
+n = int(input('Insira um número para ver sua tabuada:\n' ))
+
+print('Multiplicação:' )
+
+print(f'1 x {n} = {n}' )
+print(f'2 x {n} = {2*n}' )
+print(f'3 x {n} = {3*n}' )
+print(f'4 x {n} = {4*n}' )
+print(f'5 x {n} = {5*n}' )
+print(f'6 x {n} = {6*n}' )
+print(f'7 x {n} = {7*n}' )
+print(f'8 x {n} = {8*n}' )
+print(f'9 x {n} = {9*n}' )
+print(f'10 x {n} = {10*n}' )
+
+print('Divsão:' )
+
+print(f'{n} / 1 = {n/1:.2}' )
+print(f'{n} / 2 = {n/2:.2}' )
+print(f'{n} / 3 = {n/3:.2}' )
+print(f'{n} / 4 = {n/4:.2}' )
+print(f'{n} / 5 = {n/5:.2}' )
+print(f'{n} / 6 = {n/6:.2}' )
+print(f'{n} / 7 = {n/7:.2}' )
+print(f'{n} / 8 = {n/8:.2}' )
+print(f'{n} / 9 = {n/9:.2}' )
+print(f'{n} / 10 = {n/10:.2}' )

@@ -1,0 +1,6 @@
+print('Vamos ver o dobro de um número, seu triplo e sua raiz quadrada e cúbica' )
+num = int(input('Insira um número:\n' ))
+print(f'O dobro dele é: {num*2}' )
+print(f'O triplo dele é: {num*3}' )
+print(f'E sua raiz quadrada é: {num**(1/2):.2f}' )
+print(f'E sua raiz cúbica é: {num**(1/3):.2f}' )
