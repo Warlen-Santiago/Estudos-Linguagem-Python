@@ -10,5 +10,7 @@ elif num_qunt == 3:
     print(f'Casa das unidades: {numsep[0]}\nCasa das dezenas: {numsep[1]}\nCasa das centenas: {numsep[2]} ')
 elif num_qunt == 2:
     print(f'Casa das unidades: {numsep[0]}\nCasa das dezenas: {numsep[1]} ')
+elif num_qunt == 1:
+    print(f'Casa das unidades: {numsep[0]} ')
 else:
-    print(f'Casa das unidades: {numsep[0]}')
+    print('Insira um valor valido e tente novamente! ')
