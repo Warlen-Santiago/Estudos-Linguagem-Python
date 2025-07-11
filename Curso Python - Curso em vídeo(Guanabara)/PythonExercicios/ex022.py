@@ -1,4 +1,4 @@
-nome = input('Insira seu nome completo:\n ')
+nome = input('Insira seu nome completo:\n ').strip
 
 print('Com todas as letras maiusculas:\n ')
 print(nome.upper())
