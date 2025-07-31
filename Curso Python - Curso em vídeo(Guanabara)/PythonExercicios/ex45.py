@@ -1,6 +1,6 @@
 from random import randint
 
-print('-joquempô- ')
+print('-jokempô- ')
 ej = int(input('Escolha:\n 1-pedra\n 2-papel\n 3-tesoura \n '))
 em = randint(1, 3)
 
