@@ -1,0 +1,25 @@
+import unicodedata
+
+def remove_acentos(string):
+    forma_normalizada = unicodedata.normalize('NFKD', string)
+    para_ascii = forma_normalizada.encode('ascii', 'ignore')
+    string_sem_acentos = para_ascii.decode('ascii')
+
+    return string_sem_acentos
+
+print('-='*5,'Descobrindo de uma frase é ou não palíndromo', '=-'*5 )
+print('EX: "A mala nada na lama." a frase permanece a mesma se lida de trás pra frente desconsiderando espaços e etc. ')
+frase = input('Insira sua frase para conferir: ').strip()
+
+frase = remove_acentos(frase)
+
+frase2 = frase.split()
+
+frase = ''.join(frase2).lower()
+
+frase_invertida = frase[::-1]
+
+if frase_invertida == frase:
+    print('✅ Você tem um palíndromo. ')
+else:
+    print('❌ Você não tem um palíndromo. ')
