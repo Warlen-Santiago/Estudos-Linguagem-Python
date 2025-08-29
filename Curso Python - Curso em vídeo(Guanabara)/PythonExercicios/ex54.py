@@ -5,7 +5,7 @@ print('Insira os usuarios e seus anos de nascimento: ')
 listname = []
 listano = []
 
-for c in range(0,8):
+for c in range(0,7):
     nome = input('Nome: ')
     ano = int(input('Ano de nascimento: '))
 
