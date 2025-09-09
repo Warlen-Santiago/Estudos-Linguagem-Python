@@ -2,7 +2,7 @@ pessoas = []
 
 print('Insira Nome, Idade e Sexo( M ou F ) correspondente para cada indivíduo: ')
 
-for c in range(2):
+for c in range(4):
     pessoa = {
         'nome' : input('Nome: '),
         'idade' : int(input('Idade: ')),
