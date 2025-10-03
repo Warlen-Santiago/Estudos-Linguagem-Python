@@ -8,5 +8,5 @@ razao = int(input('razão: '))
 decimo_termo = primeiro_termo
 
 while  decimo_termo != primeiro_termo + razao * 10:
-    print(decimo_termo)
+    print(decimo_termo, end=', ')
     decimo_termo += razao
