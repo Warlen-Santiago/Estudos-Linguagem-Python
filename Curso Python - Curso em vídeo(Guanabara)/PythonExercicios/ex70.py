@@ -9,7 +9,7 @@ produtos_mais_baratos = []
 
 while True:
     produto = input('Produto: ')
-    valor = float(input('Valor: '))
+    valor = float(input('Valor: R$'))
 
     total+=valor
 
@@ -28,7 +28,9 @@ while True:
     elif valor == valor_mais_barato:
         produtos_mais_baratos.append(produto)
 
-    escolha = input('Quer continuar [S/N]: ')[0].strip().upper()
+    escolha = ''
+    while escolha not in ['S', 'N']:
+        escolha = input('Quer continuar [S/N]: ')[0].strip().upper()
     if escolha == 'N':
         break
 

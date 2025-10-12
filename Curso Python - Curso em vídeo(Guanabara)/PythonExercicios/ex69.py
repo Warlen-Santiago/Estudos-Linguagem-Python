@@ -6,8 +6,6 @@ maisd18 = 0
 homens = 0
 mulhermenosd20 = 0
 
-
-
 while True:
     sexo = ''
     while sexo not in  ['M', 'F']:
@@ -15,9 +13,6 @@ while True:
     idade = 0
     while idade <= 0 or idade > 120:
         idade = int(input('Idade: '))
-    escolha = ''
-    while escolha not in  ['S', 'N']:
-        escolha = input('Quer continuar [S/N]: ')[0].strip().upper()
 
     if idade > 18:
         maisd18+=1
@@ -26,6 +21,10 @@ while True:
     if sexo == 'F' and idade < 20:
         mulhermenosd20+=1
     
+    escolha = ''
+    while escolha not in  ['S', 'N']:
+        escolha = input('Quer continuar [S/N]: ')[0].strip().upper()
+
     if escolha == 'N':
         break
 

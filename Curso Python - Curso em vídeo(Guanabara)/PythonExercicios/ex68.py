@@ -10,7 +10,9 @@ while True:
     print('-'*40)
     print('Vamos jogar...')
     sleep(0.5)
-    escolha = input('Você quer PAR ou IMPAR?[P/I]: ')[0].strip().upper()
+    escolha = ''
+    while escolha not in ['I', 'P']:
+        escolha = input('Você quer PAR ou IMPAR?[P/I]: ')[0].strip().upper()
 
     print('PAR...')
     sleep(0.5)
@@ -18,12 +20,12 @@ while True:
     sleep(0.5)
     print('IMPAR...')
 
-    n_jogador = int(input('Jogue seu número de 1 a 10: '))
-    n_maquina = randint(1, 10)
+    n_jogador = int(input('Jogue seu número de 0 a 10: '))
+    n_maquina = randint(0, 10)
 
     print('-'*40)
 
-    print(f'Você escolheu {n_jogador} e a maquina escolheu {n_maquina} ')
+    print(f'Você escolheu {n_jogador} e a maquina escolheu {n_maquina}, total {n_jogador+n_maquina} que', 'é PAR' if (n_maquina + n_jogador) % 2 == 0 else 'é IMPAR')
 
     if escolha == 'P':
         if (n_jogador + n_maquina) % 2 == 0:
@@ -43,7 +45,8 @@ while True:
             cont_vitorias +=1 
 
 sleep(1)
-print(f'Mas, você venceu {cont_vitorias} vezes... ')
+if cont_vitorias != 0:
+    print(f'Mas, você venceu {cont_vitorias} vezes... ')
 sleep(1)
 print('GAME OVER.')
 
