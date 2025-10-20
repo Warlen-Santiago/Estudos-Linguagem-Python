@@ -4,6 +4,13 @@ print(f'{'BRASILEIRÃO 2025':^56}' )
 print('-'*50)
 print()
 
+for c in times:
+    print(c, end=', ')
+    
+print('\n')
+print('-'*50)
+print()
+
 print('Os primeiros 5 colocados são: ')
 
 for c in range(0,5):
