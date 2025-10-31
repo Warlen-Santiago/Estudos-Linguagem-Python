@@ -7,7 +7,9 @@ while True:
         print('Esse número já foi listado, por favor tente novamente. ')
     else:
         numeros.append(n)
-        escolha = input('Você deseja continuar?[S/N] ')[0].upper().strip()
+        escolha=''
+        while escolha not in ('S','N'):
+            escolha = input('Você deseja continuar?[S/N] ')[0].upper().strip()
         if escolha == 'N':
             break
     print()
