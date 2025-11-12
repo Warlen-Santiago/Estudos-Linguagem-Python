@@ -7,9 +7,9 @@ print('Insira os dados:')
 print()
 
 while True:
-    dados.append(input('Nome: '))
+    dados.append(input('Nome: ').capitalize())
     dados.append(float(input('Peso: ')))
-    pessoas.append(dados[:])
+    pessoas.append(dados[:]) 
     dados.clear()
 
     escolha = ''
