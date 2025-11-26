@@ -5,9 +5,14 @@ pessoas = []
 while True:
     p = {
         'Nome' : input('Nome: ').capitalize(),
-        'Sexo' : input('Sexo:[M/F]')[0].upper().strip(),
         'Idade' : int(input('Idade: '))
     }
+    p['Sexo'] = ''
+    while p['Sexo'] not in ('M','F'):
+        p['Sexo'] = input('Sexo:[M/F]')[0].upper().strip()
+        if p['Sexo'] not in ('M','F'):
+            print('-Por favor insira um valor entre M ou F ')
+
     pessoas.append(p)
     escolha = ''
     while escolha not in ('N', 'S'):
