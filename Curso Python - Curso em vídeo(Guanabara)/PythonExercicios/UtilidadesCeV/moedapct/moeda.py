@@ -50,6 +50,7 @@ def resumo(n,a=10,d=10):
         {real(n)} dobrado:                 {dobro(n)}
         {real(n)} metade:                  {metade(n)}
 ''')
+    
 
 def real(num):
     return(f'R${num:.2f} ')
