@@ -1,4 +1,10 @@
 def valida(v,opçoes=()):
+    '''
+    Verifica entre as opções fornecidas se a netrada de dados foi valida, caso não seja informa que o valor é invalido e retorna para entrada de dados
+    
+    :param v: Recebe o texto que aparecera para a pessoa 
+    :param opçoes: Recebe as opções para verificar a validação
+    '''
 
     escolha = input(v)[0].upper().strip()
     if escolha.isnumeric():
