@@ -8,10 +8,13 @@ txt.cor()
 # buscano se ja ha uma lista com pessoas cadastradas ou se é preciso criar uma 
 pessoas = dados.carrega('lista_de_pessoas.json')
 
+
+
+#----------------------criando o menu de forma direta com uma função--------------------------------
 while True:
 
     txt.cor('cinza')
-    escolha_menu = valide.valida('''                     
+    escolha_menu = valide.valida(f'''                     
         - opções
                     
           1 - Ver dados cadastrados
@@ -20,7 +23,10 @@ while True:
 
                                    
 ----------------------------------------------------------------------------------------------------
+sua resposta:
 ''',(1, 2, 3)) # Menu com as devidas pções
+    
+#-------------------------------------opções de escolha----------------------------------------------
     
     if escolha_menu == 1: # Escolha numero 1 do menu
         sleep(0.5)
