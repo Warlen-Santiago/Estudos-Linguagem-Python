@@ -1,0 +1,1 @@
+from .arquivo import arqexist, criararq, lerarq, cadastrar

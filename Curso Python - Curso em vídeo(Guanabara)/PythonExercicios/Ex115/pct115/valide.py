@@ -49,6 +49,6 @@ def validaint(n):
     while num.isnumeric() == False: 
         print('\033[;31mErro... O valor inserido é inavlido, tente novamente.\033[m ')
         num = input(n)
-
+    num = int(num)
     return num
 
