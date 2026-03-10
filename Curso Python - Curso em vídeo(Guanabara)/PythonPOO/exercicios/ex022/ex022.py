@@ -1,5 +1,6 @@
 from rich import print
 from rich.panel import Panel
+from time import sleep
 
 
 class ControleRemoto():
@@ -15,30 +16,31 @@ class ControleRemoto():
             self.situação = 'desligada'
 
     def vol(self, v):
-        if v == '+':
-            if self.volume == 5:
-                self.volume = 5
-            else:
-                self.volume +=1
+        if self.situação == 'ligada':
+            if v == '+':
+                if self.volume == 5:
+                    self.volume = 5
+                else:
+                    self.volume +=1
 
-        elif v == '-':
-            if self.volume == 0:
-                self.volume = 0
-            else:
-                self.volume -=1
-
+            elif v == '-':
+                if self.volume == 0:
+                    self.volume = 0
+                else:
+                    self.volume -=1
+        
     def can(self,c):
-        if c == '>':
-            if self.canal == 5:
-                self.canal = 1
-            else:
-                self.canal += 1
-        elif c == '<':
-            if self.canal == 1:
-                self.canal = 5
-            else:
-                self.canal -= 1
-
+        if self.situação == 'ligada':
+            if c == '>':
+                if self.canal == 5:
+                    self.canal = 1
+                else:
+                    self.canal += 1
+            elif c == '<':
+                if self.canal == 1:
+                    self.canal = 5
+                else:
+                    self.canal -= 1
 
     def exibir(self):
         
@@ -76,5 +78,37 @@ class ControleRemoto():
 
             return exibição
         else:
-            pass
+            exibição = Panel(f'[purple]A TV esta [/][red]desligada![/] ', title='[TV]', expand=False)
 
+            return exibição
+
+meu_controle = ControleRemoto()
+
+escolha =''
+while True:
+    
+    for c in range (0,30):
+        print('')
+
+    print(meu_controle.exibir())
+    escolha = input('')
+
+    if escolha in ('+','-'):
+        meu_controle.vol(escolha)
+
+    elif escolha in ('<','>'):
+        meu_controle.can(escolha)
+
+    elif escolha == '@':
+        meu_controle.liga_desliga()
+
+    elif escolha == '0':
+        break
+
+    elif escolha == '?':
+        print('Controle remoto:\n- volume : + ou -\n- canal : < ou >\n- ligar ou desligar : @\n- "0" fecha o programa')
+        sleep(7)
+    else:
+        print('\nBotão [red]invalido[/], a TV não responde (digite "?" para consultar o manual do controle)')
+        sleep(5)
+    
