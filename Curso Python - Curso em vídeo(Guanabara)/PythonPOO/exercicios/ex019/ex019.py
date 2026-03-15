@@ -12,7 +12,7 @@ class Livro():
         apresentação = Panel(f'📚 📖[blue] Você acabou de abrir o livro[/] [red]"{self.nome}"[/],[blue] que tem [/][green]{self.pgs} paginas[/] ,[blue] agora você está na pagina:[/][green] 1[/]')
         print(apresentação)
 
-    def avançar_pg(self, quant_pg):
+    def avançar_pg(self, quant_pg=1):
 
         for pg in range(1,quant_pg+1):
             if self.pg_atual == self.pgs:
