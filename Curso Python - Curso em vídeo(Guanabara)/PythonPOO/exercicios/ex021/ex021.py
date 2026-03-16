@@ -4,7 +4,7 @@ from rich import print
 class Caneta():
     def __init__(self, cor='Branco'):
         self.cor = cor
-        self.tampa = 'tampada'
+        self.tampa = False
 
         if self.cor.lower() == 'branco':
             self.cor = 'white'
@@ -32,14 +32,17 @@ class Caneta():
 
 
     def destampar(self):
-        self.tampa = 'destampado'
+        self.tampa = True
+
+    def tampar(self):
+        self.tampa = False
 
     def quebra_linha(self,q=1):
         for c in range(0,q):
             print('')
 
     def escrever(self,txt):
-        if self.tampa == 'destampado':
+        if self.tampa:
             print(f'[{self.cor}]{txt}[/]')
         else:
             print('🚫[red] Sua caneta está[/][purple] tampada[/],[red] a [/][purple]destampe[/] [red] para escrever![/]🖊️✍️ ')
