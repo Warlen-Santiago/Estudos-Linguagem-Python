@@ -8,12 +8,13 @@ class Gamer():
         self.nick =nick
         self.jogos_fav = []
 
-    def add_favorito(self,nome_jogo):
-        self.jogos_fav.append(nome_jogo)
+    def add_favorito(self,nome_jogo=''):
+        self.jogos_fav.append(nome_jogo.capitalize())
         self.jogos_fav.sort()
 
     def ficha(self):
         lista_jogos = '\n🎮 '.join(self.jogos_fav)
+
         ficha = Panel(f'[black]Nome real:[/] [red]{self.nome}[/]\n[yellow]Jogos favoritos:[/][black] \n🎮 {lista_jogos}[/] ', title=f'Player -{self.nick}-', expand=False, style='blue')
         return ficha
 
