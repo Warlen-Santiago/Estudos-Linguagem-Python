@@ -23,5 +23,3 @@ class Produto():
         exibir = Panel(f'Foram repostos [green]{quant_repor} de {self.nome}, {self.marca}[/], estoque atual de [green]{self.quant}[/] ', expand=False)
 
         return exibir
-
-
